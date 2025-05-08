@@ -20,10 +20,11 @@
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
-- Nome do Tutor
+- Lucas Gomes Moreira
+- Leonardo Ruiz Orabona
 ### Coordenador(a)
-- Nome do Coordenador
-
+- André Godoi Chiovato
+- 
 ---
 
 ## 📜 Descrição
