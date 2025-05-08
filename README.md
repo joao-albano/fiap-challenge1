@@ -12,10 +12,11 @@
 ## Nome do grupo
 
 ## 👨‍🎓 Integrantes: 
-- Nome do integrante 1
-- Nome do integrante 2
-- Nome do integrante 3
-- Nome do integrante 4
+- Gabriella Serni Ponzetta – RM 566296
+- João Francisco Maciel Albano – RM 565985
+- Fernando Ricardo – RM 566501
+- João Pedro Abreu dos Santos – RM 563261
+- Gabriel Schuler Barros – RM 564934
 
 ## 👩‍🏫 Professores:
 ### Tutor(a) 
@@ -45,20 +46,8 @@ Indústrias que dependem de equipamentos para produção enfrentam prejuízos op
 
 ## 🏗️ Arquitetura da Solução
 
-```mermaid
-graph TD
-    A[Simulated Industrial Machine] -->|MQTT| B[AWS IoT Core]
-    B --> C[AWS Lambda]
-    C --> D[FastAPI Backend]
-    D -->|Armazena| E[PostgreSQL - RDS]
-    D -->|Envia| F[Modelo TensorFlow]
-    F -->|Retorna resultado| D
-    D -->|Consulta GPT| G[OpenAI GPT]
-    G -->|Insight| D
-    D -->|Grava no BD e envia alerta| E
-    D -->|Notifica| H[Evolution API - WhatsApp]
-    I[Usuário (Frontend React)] -->|Consulta| D
-```
+![TPBFZjD03CRlynHMJt1OYGiN3cWBNH0IIALPn05ny6RSTDIPySXsTlaZ7WPns2VW2V9Y9DssYLesjt6-Rtx-FBvKGx4sHHTfRM0C4fgDWGz2jGNEJhSX5nHCaDcJKe7dpoP5mRmzAzQS2cVALjdtI31SXRc9D97e1ZtVXTp06gEISrWR2rGXjH4zo_xyITlkjmHshc2znOPWzXeJUWHFC2](https://github.com/user-attachments/assets/123d9504-9a62-4ad9-ada5-46f4e9d9340f)
+
 
 ---
 
