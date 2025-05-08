@@ -3,28 +3,23 @@
 
 # AI Project Document - Módulo 1 - FIAP
 
-**_Os trechos em itálico servem apenas como guia para o preenchimento da seção. Por esse motivo, não devem fazer parte da documentação final_**
-
 ## Nome do Grupo
 
 #### Nomes dos integrantes do grupo
-
-
+- Gabriella Serni Ponzetta – RM 566296
+- João Francisco Maciel Albano – RM 565985
+- Fernando Ricardo – RM 566501
+- João Pedro Abreu dos Santos – RM 563261
+- Gabriel Schuler Barros – RM 564934
 
 ## Sumário
 
-[1. Introdução](#c1)
-
-[2. Visão Geral do Projeto](#c2)
-
-[3. Desenvolvimento do Projeto](#c3)
-
-[4. Resultados e Avaliações](#c4)
-
-[5. Conclusões e Trabalhos Futuros](#c5)
-
-[6. Referências](#c6)
-
+[1. Introdução](#c1)  
+[2. Visão Geral do Projeto](#c2)  
+[3. Desenvolvimento do Projeto](#c3)  
+[4. Resultados e Avaliações](#c4)  
+[5. Conclusões e Trabalhos Futuros](#c5)  
+[6. Referências](#c6)  
 [Anexos](#c7)
 
 <br>
@@ -35,58 +30,70 @@
 
 ### 1.1.1. Contexto da Inteligência Artificial
 
-*Descreva aqui o contexto da indústria de Inteligência Artificial. Explique o segmento de atuação, as atividades executadas e a abrangência das suas aplicações (internacional, nacional ou regional).*
+O projeto de manutenção preditiva se insere no contexto da aplicação de Inteligência Artificial no setor industrial, com foco na indústria 4.0. A IA tem papel estratégico para aumentar a eficiência operacional, reduzindo paradas não planejadas por meio de análise preditiva. Com abrangência global, a aplicação de IA na manutenção de ativos industriais representa um dos segmentos mais promissores da transformação digital industrial.
 
 ### 1.1.2. Descrição da Solução Desenvolvida
 
-*Descreva brevemente a solução de IA desenvolvida. Inclua aspectos essenciais para a criação de valor do produto com o objetivo de entender melhor a realidade do cliente e entregar uma solução alinhada com suas expectativas.*
+Desenvolvemos uma solução digital que coleta dados em tempo real de sensores de máquinas industriais (reais ou simulados), armazena esses dados em um banco PostgreSQL (RDS/AWS), executa previsões com TensorFlow, gera insights com o modelo GPT da OpenAI e emite notificações via WhatsApp utilizando a Evolution API. A solução conta ainda com uma interface web acessível via React para visualização dos dados, permitindo uma gestão eficiente e preventiva das operações industriais.
 
 # <a name="c2"></a>2. Visão Geral do Projeto
 
 ## 2.1. Objetivos do Projeto
 
-*Defina claramente os objetivos do projeto de IA. O que o projeto pretende alcançar?*
+O principal objetivo é desenvolver uma aplicação de IA capaz de prever falhas em máquinas industriais, evitando paralisações inesperadas por meio de insights baseados em dados operacionais coletados em tempo real.
 
 ## 2.2. Público-Alvo
 
-*Identifique o público-alvo do projeto. Quem são os usuários finais da solução desenvolvida?*
+Empresas do setor industrial que buscam reduzir custos com manutenção corretiva, aumentar a disponibilidade dos seus ativos e implantar soluções digitais integradas à Internet das Coisas.
 
 ## 2.3. Metodologia
 
-*Descreva a metodologia utilizada para desenvolver o projeto. Quais foram as etapas e processos seguidos?*
+A metodologia adotada se baseia em etapas práticas: definição do escopo, simulação e/ou captura de dados, criação de modelo preditivo com TensorFlow, integração com backend FastAPI, geração de insights com OpenAI GPT, testes e visualização em frontend React.
 
 # <a name="c3"></a>3. Desenvolvimento do Projeto
 
 ## 3.1. Tecnologias Utilizadas
 
-*Liste as tecnologias, ferramentas e bibliotecas utilizadas no desenvolvimento do projeto de IA.*
+- Python (FastAPI)
+- TensorFlow
+- OpenAI GPT API
+- PostgreSQL (AWS RDS)
+- AWS IoT Core, Lambda, EC2
+- React + Vite + Tailwind
+- Evolution API (WhatsApp)
 
 ## 3.2. Modelagem e Algoritmos
 
-*Descreva os modelos e algoritmos de IA utilizados no projeto. Explique por que esses modelos foram escolhidos e como foram implementados.*
+Foi utilizado um modelo de regressão preditiva com TensorFlow para calcular o tempo restante de vida útil (RUL) dos equipamentos. Esse modelo retorna uma probabilidade de falha que alimenta o pipeline de notificações e geração de insights.
 
 ## 3.3. Treinamento e Teste
 
-*Descreva o processo de treinamento e teste dos modelos de IA. Inclua informações sobre os conjuntos de dados utilizados, métricas de avaliação e resultados obtidos.*
+Os dados foram simulados com base em padrões reais da indústria. O modelo foi avaliado utilizando métricas de MSE (erro quadrático médio) e RMSE, além de validações cruzadas. O backend periodicamente envia os dados para o modelo, que retorna ao backend para nova análise e geração de resposta.
 
 # <a name="c4"></a>4. Resultados e Avaliações
 
 ## 4.1. Análise dos Resultados
 
-*Analise os resultados obtidos com os modelos de IA. Compare os resultados esperados com os resultados reais e discuta as possíveis razões para as diferenças.*
+Os resultados esperados foram atingidos: o modelo identificou com precisão padrões de degradação e a integração com GPT gerou feedbacks explicativos, facilmente interpretáveis no painel de controle.
 
 ## 4.2. Feedback dos Usuários
 
-*Inclua feedback recebido de usuários finais durante o processo de avaliação do projeto.*
+Usuários-teste relataram que a visualização por insights (ao invés de dados brutos) melhorou a tomada de decisão e aumentou a confiança na adoção da solução no ambiente fabril.
 
 # <a name="c5"></a>5. Conclusões e Trabalhos Futuros
 
-*Descreva de que formas a solução desenvolvida atingiu os objetivos do projeto. Indique pontos fortes e pontos a melhorar. Relacione os pontos de melhorias evidenciados e elabore um plano de ações para serem implementadas no futuro.*
+A solução atingiu com êxito os objetivos definidos. Entre os pontos fortes estão: modularidade da arquitetura, clareza visual no dashboard e acurácia dos alertas. Como melhorias futuras, pretende-se incluir uma camada de aprendizado contínuo e expandir o número de sensores monitorados por máquina.
 
 # <a name="c6"></a>6. Referências
 
-_Incluir as principais referências de seu projeto, para que outros possam consultar caso tenham interesse em aprofundar._
+- https://www.fiap.com.br  
+- https://www.tensorflow.org  
+- https://platform.openai.com  
+- https://aws.amazon.com  
+- https://doc.evolution-api.com/v1/pt/get-started/introduction
 
 # <a name="c7"></a>Anexos
 
-*Inclua aqui quaisquer complementos para seu projeto, como diagramas, imagens, tabelas etc. Organize em sub-tópicos utilizando headings menores (use ## ou ### para isso).*
+## Diagramas e Estrutura Arquitetural
+
+![TPBFZjD03CRlynHMJt1OYGiN3cWBNH0IIALPn05ny6RSTDIPySXsTlaZ7WPns2VW2V9Y9DssYLesjt6-Rtx-FBvKGx4sHHTfRM0C4fgDWGz2jGNEJhSX5nHCaDcJKe7dpoP5mRmzAzQS2cVALjdtI31SXRc9D97e1ZtVXTp06gEISrWR2rGXjH4zo_xyITlkjmHshc2znOPWzXeJUWHFC2](https://github.com/user-attachments/assets/6cdb3460-4fa5-4f15-a894-1d2e7e22bfc1)
